@@ -1,6 +1,6 @@
 import 'dart:io' show stdout;
 
-import 'package:interact2/interact.dart' show AsyncInput, ValidationError;
+import 'package:interact2/interact2.dart' show AsyncInput, ValidationError;
 
 void main() async {
   stdout.writeln("Check email availability via async call");

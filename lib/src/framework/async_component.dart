@@ -10,7 +10,6 @@ part of 'framework.dart';
 /// Generic [T] is the return type of the [Component] which
 /// will be returned from the `interact()` function.
 abstract class AsyncComponent<T extends dynamic> extends Component<Future<T>> {
-
   /// Starts the rendering process.
   ///
   /// Handles not only rendering the `interact` function from the [State]

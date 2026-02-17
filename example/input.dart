@@ -1,6 +1,6 @@
 import 'dart:io' show stdout;
 
-import 'package:interact2/interact.dart' show Input, ValidationError;
+import 'package:interact2/interact2.dart' show Input, ValidationError;
 
 void main() {
   final name = Input(prompt: 'Your name').interact();

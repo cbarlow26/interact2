@@ -1,4 +1,4 @@
-import 'package:interact2/interact.dart' show Spinner, Theme;
+import 'package:interact2/interact2.dart' show Spinner, Theme;
 
 Future<void> main() async {
   final theme = Theme.defaultTheme;

@@ -1,6 +1,6 @@
 import 'dart:io' show stdout;
 
-import 'package:interact2/interact.dart' show Sort;
+import 'package:interact2/interact2.dart' show Sort;
 
 void main() {
   final models = ['S', '3', 'X', 'Y'].map((x) => 'Model $x').toList();
