@@ -1,3 +1,7 @@
+## 4.0.0
+
+- Merged 'add failed state to spinner component #19' PR from original repo. Thank you.
+
 ## 3.0.0
 
 - Fixed multi-byte UTF-8 character input (accented/diacritical characters) on macOS and Linux

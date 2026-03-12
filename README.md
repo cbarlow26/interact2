@@ -4,8 +4,6 @@ A collection of customizable interactive command-line components.
 
 Interact2 is a fork of the original Interact library and picks up where it left off. Thank you to the developers of the original Interact for their great work.
 
-<br>
-
 ## Table of Contents
 
 - [Overview](#overview)
@@ -171,9 +169,11 @@ A spinner will show a spinning indicator until the user calls it's `done` method
 final gift = Spinner(
   icon: '🏆',
   leftPrompt: (done) => '', // prompts are optional
-  rightPrompt: (done) => done
-      ? 'here is a trophy for being patient'
-      : 'searching a thing for you',
+  rightPrompt: (state) => switch (state) {
+      SpinnerStateType.inProgress => 'Processing...',
+      SpinnerStateType.done => 'Done!',
+      SpinnerStateType.failed => 'Failed!',
+    },
 ).interact();
 
 await Future.delayed(const Duration(seconds: 5));
@@ -187,7 +187,11 @@ final spinners = MultiSpinner();
 
 final horse = spinners.add(Spinner(
   icon: '🐴',
-  rightPrompt: (done) => done ? 'finished' : 'waiting',
+  rightPrompt: (state) => switch (state) {
+    SpinnerStateType.inProgress => 'Processing...',
+    SpinnerStateType.done => 'Done!',
+    SpinnerStateType.failed => 'Failed!',
+  },
 )); // notice how you don't need to call the `.interact()` function
 
 await Future.delayed(const Duration(seconds: 5));
